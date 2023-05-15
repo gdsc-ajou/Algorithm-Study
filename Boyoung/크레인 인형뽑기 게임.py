@@ -1,8 +1,6 @@
 def solution(board, moves):
     removed_count = 0
     basket = []
-    pre_pick = 0
-    now_pick = 0
     
     for i in range(len(moves)):
         temp = moves[i] - 1
@@ -14,7 +12,6 @@ def solution(board, moves):
                     removed_count += 2
                     basket.pop()
                     basket.pop()
-                now_pick = 0
                 break  
     
     return removed_count
